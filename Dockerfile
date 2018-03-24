@@ -2,7 +2,7 @@
 #
 #COPY gopath/bin/gcp-cd-codelab /go/bin/gcp-cd-codelab
 #
-##ENTRYPOINT /go/bin/gcp-cd-codelab
+#ENTRYPOINT /go/bin/gcp-cd-codelab
 FROM centos:centos6
 ENV container docker
 RUN yum install -y epel-release && \
