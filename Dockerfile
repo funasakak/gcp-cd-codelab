@@ -7,7 +7,7 @@ FROM centos:centos6
 ENV container docker
 RUN yum install -y epel-release && \
     yum install -y nginx && \
-    yum clean all && \
-    service nginx start
+    yum clean all
+ENTRYPOINT /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
 EXPOSE 80
 
