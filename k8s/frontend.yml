@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: gcr.io/fast-lattice-164212/gcp-cd-codelab
+        image: index.docker.io/funasakak/gcp-cd-codelab
         resources:
           requests:
             cpu: 100m
