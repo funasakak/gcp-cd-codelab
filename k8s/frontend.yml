@@ -32,9 +32,21 @@ metadata:
     app: guestbook
     tier: frontend
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - port: 80
   selector:
     app: guestbook
     tier: frontend
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: spinnaker
+  name: basic-ingress
+spec:
+  backend:
+    serviceName: frontend
+    servicePort: 80
