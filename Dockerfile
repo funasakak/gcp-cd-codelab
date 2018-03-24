@@ -8,6 +8,6 @@ ENV container docker
 RUN yum install -y epel-release && \
     yum install -y nginx && \
     yum clean all && \
-RUN service start nginx
+    service nginx start
 EXPOSE 80
 
